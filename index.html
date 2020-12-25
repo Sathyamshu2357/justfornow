@@ -10,6 +10,20 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 
+        <script>
+            function changeContent(x) {
+                var all = ["home", "whoweare", "whatwedo", "ourpresence", "ourcrew", "contactus"];
+                for(each in all) {
+                    if(document.getElementById(all[each]).classList.contains("is-hidden") === false ) {
+                        document.getElementById(all[each]).classList.remove("is-active");
+                        document.getElementById(all[each]).classList.add("is-hidden");
+                    }
+                }
+                document.getElementById(x).classList.remove("is-hidden");
+                document.getElementById(x).classList.add("is-active");
+            }
+        </script>
+
     </head>
 
     <body class="has-background-black">
@@ -22,7 +36,7 @@
                   </a>
                 </div>
               
-                <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-menu">
                   <div class="navbar-start">
                     <a class="navbar-item">
                       Company Name
@@ -34,12 +48,12 @@
             <section class="section" style="width: 100%;  border: 0; margin: 0; padding: 0;">
                 <div class="tabs is-centered">
                     <ul>
-                    <li><a><button class="button is-info is-rounded">Home</button></a></li>
-                    <li><a><button class="button is-info is-rounded">Who we Are</button></a></li>
-                    <li><a><button class="button is-info is-rounded">What we do</button></a></li>
-                    <li><a><button class="button is-info is-rounded">Our Presence</button></a></li>
-                    <li><a><button class="button is-info is-rounded">Oue Crew</button></a></li>
-                    <li><a><button class="button is-info is-rounded">Contact Us</button></a></li>
+                    <li><a><button onclick = 'changeContent("home")' class="button is-info is-rounded">Home</button></a></li>
+                    <li><a><button onclick = 'changeContent("whoweare")' class="button is-info is-rounded">Who we Are</button></a></li>
+                    <li><a><button onclick = 'changeContent("whatwedo")' class="button is-info is-rounded">What we do</button></a></li>
+                    <li><a><button onclick = 'changeContent("ourpresence")' class="button is-info is-rounded">Our Presence</button></a></li>
+                    <li><a><button onclick = 'changeContent("ourcrew")' class="button is-info is-rounded">Oue Crew</button></a></li>
+                    <li><a><button onclick = 'changeContent("contactus")' class="button is-info is-rounded">Contact Us</button></a></li>
                     </ul>
                 </div>
             </section>>
@@ -75,6 +89,30 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+        </section>
+
+        <section id="home" class="section tabss is-active">
+            <span style="color: white; font-size: 25px;" > Home </span>
+        </section>
+
+        <section id="whoweare" class="section tabss is-hidden">
+            <span style="color: white; font-size: 25px;" > Who we Are . . . </span>
+        </section>
+
+        <section id="whatwedo" class="section tabss is-hidden">
+            <span style="color: white; font-size: 25px;" > What we Do . . .  </span>
+        </section>
+
+        <section id="ourpresence" class="section tabss is-hidden">
+            <span style="color: white; font-size: 25px;" > Our Presence  </span>
+        </section>
+
+        <section id="ourcrew" class="section tabss is-hidden">
+            <span style="color: white; font-size: 25px;" > Our Crew  </span>
+        </section>
+
+        <section id="contactus" class="section tabss is-hidden">
+            <span style="color: white; font-size: 25px;" > Contact Us  </span>
         </section>
 
     </body>
