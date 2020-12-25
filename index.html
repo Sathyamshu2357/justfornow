@@ -4,6 +4,7 @@
         <title> Title is Nothing ... !</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="D:\$athyamshu\Web Development\font-awesome-4.7.0\css\font-awesome.min.css">
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -21,8 +22,15 @@
                 }
                 document.getElementById(x).classList.remove("is-hidden");
                 document.getElementById(x).classList.add("is-active");
+                if(x === "contactus") { myMap(); }
             }
+
         </script>
+
+        <style>
+            .button.is-square.is-primary { transition-duration: 1.0s;}
+            .button.is-square.is-primary:hover{ background-color: green;}
+        </style>
 
     </head>
 
@@ -43,6 +51,12 @@
                     </a>
                     </div>
                 </div>
+                <div style="float:right ;">
+                    <button href="#" class="button is-square is-primary" style="margin: 0; border: 0; padding: 10;"><i style="font-size: 20px" class="fa fa-youtube" aria-hidden="true"></i></button>
+                    <button href="#" class="button is-square is-primary" style="margin: 0; border: 0; padding: 10;"><i style="font-size: 20px" class="fa fa-twitter" aria-hidden="true"></i></button>
+                    <button href="#" class="button is-square is-primary" style="margin: 0; border: 0; padding: 10;"><i style="font-size: 20px" class="fa fa-rss" aria-hidden="true"></i></button>
+
+                </div>
             </nav>
             </section>
             <section class="section" style="width: 100%;  border: 0; margin: 0; padding: 0;">
@@ -60,7 +74,7 @@
         </nav>
 
         <section class="section is-centered">
-        <div class="container-fluid mt-0 px-0 is-centered">
+        <div class="container-fluid mt-20px-0 is-centered">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -69,13 +83,13 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <figure class="image">
-                    <img src="assets/slider1.jpg" style="width: 90%; height: 650px" class="d-block w-100" alt="...">
+                    <img src="assets/slider1.jpg" style="width: 90%; height: 620px" class="d-block w-100" alt="...">
                     </figure>
                     </div>
                     <div class="carousel-item">
                         <figure class="image">
 
-                    <img src="assets/slider2.jpg" style="width: 90%; height: 650px" class="d-block w-100" alt="...">
+                    <img src="assets/slider2.jpg" style="width: 90%; height: 620px" class="d-block w-100" alt="...">
                     </figure>
                     </div>
                     
@@ -92,27 +106,29 @@
         </section>
 
         <section id="home" class="section tabss is-active">
-            <span style="color: white; font-size: 25px;" > Home </span>
+            <span style="color: white; font-size: 20px;" > Home </span>
         </section>
 
         <section id="whoweare" class="section tabss is-hidden">
-            <span style="color: white; font-size: 25px;" > Who we Are . . . </span>
+            <span style="color: white; font-size: 20px;" > Who we Are . . . </span>
         </section>
 
         <section id="whatwedo" class="section tabss is-hidden">
-            <span style="color: white; font-size: 25px;" > What we Do . . .  </span>
+            <span style="color: white; font-size: 20px;" > What we Do . . .  </span>
         </section>
 
         <section id="ourpresence" class="section tabss is-hidden">
-            <span style="color: white; font-size: 25px;" > Our Presence  </span>
+            <span style="color: white; font-size: 20px;" > Our Presence  </span>
         </section>
 
         <section id="ourcrew" class="section tabss is-hidden">
-            <span style="color: white; font-size: 25px;" > Our Crew  </span>
+            <span style="color: white; font-size: 20px;" > Our Crew  </span>
         </section>
 
         <section id="contactus" class="section tabss is-hidden">
-            <span style="color: white; font-size: 25px;" > Contact Us  </span>
+            <span style="color: white; font-size: 20px;" > Contact Us  </span>
+            <div id="googleMap" style="width:100%;height:420px;"></div>
+
         </section>
 
     </body>
